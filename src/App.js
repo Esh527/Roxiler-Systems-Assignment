@@ -15,7 +15,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://your-proxy.herokuapp.com/proxy');
+        const response = await fetch('https://s3.amazonaws.com//proxy');
         if (!response.ok) {
           throw new Error('Network response error');
         }
