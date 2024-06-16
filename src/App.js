@@ -15,7 +15,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/roxiler.com/product_transaction.json');
+        const response = await fetch('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
         if (!response.ok) {
           throw new Error('Network response error');
         }
