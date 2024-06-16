@@ -23,7 +23,7 @@ const App = () => {
         console.log("Fetched Data:", fetchedData);
         setData(fetchedData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        //console.error('Error fetching data:', error);
       } finally {
         setLoading(false);
       }
