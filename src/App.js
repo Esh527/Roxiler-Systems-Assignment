@@ -15,7 +15,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
+        const response = await fetch('https://your-proxy.herokuapp.com/proxy');
         if (!response.ok) {
           throw new Error('Network response error');
         }
@@ -31,6 +31,26 @@ const App = () => {
 
     fetchData();
   }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       setLoading(true);
+  //       const response = await fetch('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
+  //       if (!response.ok) {
+  //         throw new Error('Network response error');
+  //       }
+  //       const fetchedData = await response.json();
+  //       console.log("Fetched Data:", fetchedData);
+  //       setData(fetchedData);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="app">
